@@ -7,8 +7,7 @@ interface TypeProps {
 }
 
 export const Container = styled.View<TypeProps>`
-  background-color: ${({ theme, type }) => 
-  type === 'total' ? theme.colors.secondary : theme.colors.shape};
+  background-color: ${({ theme, type }) => type === 'total' ? theme.colors.secondary : theme.colors.shape};
   width: ${RFValue(300)}px;
   border-radius: 5px;
   padding: 19px 23px;
@@ -31,7 +30,7 @@ export const Title = styled.Text<TypeProps>`
 export const Icon = styled(Feather)<TypeProps>`
   font-size: ${RFValue(40)}px;
 
-${({ type }) => type === 'up' && css`
+  ${({ type }) => type === 'up' && css`
   color: ${({theme}) => theme.colors.success};
 `};
 
