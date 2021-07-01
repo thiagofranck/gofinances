@@ -34,7 +34,7 @@ export const Button = styled(RectButton)`
   align-items: center;
   justify-content: center;
   padding: 16px;
-`;
+`;  
 
 export const Icon = styled(Feather)<IconProps>`
   font-size: ${RFValue(24)}px;
