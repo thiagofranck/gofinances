@@ -118,6 +118,7 @@ export function Register() {
     removeAll();
   }, []); */
 
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <Container>
