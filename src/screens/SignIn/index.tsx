@@ -5,22 +5,23 @@ import AppleSvg from '../../assets/apple.svg'
 import GoogleSvg from '../../assets/google.svg'
 import LogoSvg from '../../assets/logo.svg'
 
+import { SignInSocialButton } from '../../components/SignInSocialButton'
+
 import { 
   Container,
   Header,
-  TitleWraper,
+  TitleWrapper,
   Title,
   SignInTitle,
   Footer,
-
-
+  FooterWrapper
 } from './styles'
 
 export function SignIn() {
   return (
     <Container>
       <Header>
-        <TitleWraper>
+        <TitleWrapper>
           <LogoSvg 
             width={RFValue(120)}
             height={RFValue(68)}
@@ -32,7 +33,7 @@ export function SignIn() {
             muito simples
           </Title>
 
-        </TitleWraper>
+        </TitleWrapper>
         
         <SignInTitle>
           Faça seu login com {'\n'}
@@ -41,7 +42,17 @@ export function SignIn() {
       </Header>
 
       <Footer>
+        <FooterWrapper>
+          <SignInSocialButton 
+            title="Entrar com Google"
+            svg={GoogleSvg}
+          />
 
+          <SignInSocialButton 
+            title="Entrar com Apple"
+            svg={AppleSvg}
+          />
+        </FooterWrapper>
       </Footer>
 
     </Container>
